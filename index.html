@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tanuja Doppalapudi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE professional, confident, calm: a portfolio a hiring manager reads in 30 seconds
+   IDEA a passing CI quality report: every check green, before and after numbers
+   PICTURE the "quality report" panel with before -> after rows drawn as dumbbell bars
+   COLOUR her resume green #1F6B5C as the dominant field, white, soft tint, one warm accent for "before"
+   TYPE Manrope display + Inter text
+   LAYOUT laptop: green band with name and summary over the report panel; phone: name, report, details */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0e1715);--ink:light-dark(#12201c,#e6f0ec);--mute:light-dark(#55665f,#a3b8b0);--green:light-dark(#1f6b5c,#163f37);--deep:light-dark(#174f44,#0f2e28);--tint:light-dark(#e8f1ee,#16241f);--line:light-dark(#d5e3dd,#24362f);--acc:light-dark(#c2410c,#ff9a5c);--good:light-dark(#1f6b5c,#6fd6b8);--panel:light-dark(#ffffff,#121e1b)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Manrope,Inter,sans-serif;letter-spacing:-.02em;line-height:1.1;margin:0}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(36px,5vw,72px) max(5vw,16px)}
+header.nav{position:sticky;top:0;z-index:5;background:var(--green);color:#fff;padding:0 max(5vw,16px)}
+header.nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;min-height:60px}
+header.nav strong{font-family:Manrope,sans-serif;font-size:18px}
+header.nav nav{display:flex;flex-wrap:wrap;gap:2px}
+header.nav nav a{text-decoration:none;padding:10px 12px;border-radius:8px;font-weight:500;color:#e2f2ec}
+header.nav nav a:hover{background:rgb(255 255 255/.12);color:#fff}
+.hero{background:var(--green);color:#fff;padding-top:clamp(28px,4vw,56px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,4vw,56px);align-items:center}
+.hero h1{font-size:clamp(40px,6vw,64px);font-weight:800}
+.role{font-size:clamp(19px,2vw,22px);font-weight:600;margin:12px 0 4px;color:#d9f0e8}
+.where{color:#bfe0d5;margin:0 0 18px}
+.hero p.sum{font-size:17px;max-width:56ch;color:#f1faf7;margin:0 0 22px}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid #fff}
+.btn.solid{background:#fff;color:var(--green)}
+.btn:focus-visible,nav a:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.report{background:var(--panel);color:var(--ink);border-radius:16px;padding:22px 22px 18px;box-shadow:0 24px 50px -28px rgb(0 0 0/.55)}
+.rhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:6px}
+.rhead h2{font-size:19px}
+.pass{display:inline-flex;align-items:center;gap:6px;background:var(--tint);color:var(--good);font-weight:600;font-size:14px;padding:4px 10px;border-radius:99px;white-space:nowrap}
+.pass::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--good)}
+.row{padding:12px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.rtop{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.rtop b{font-weight:600;font-size:15px}
+.rtop span{font-family:Manrope,sans-serif;font-weight:800;font-size:18px;color:var(--good);white-space:nowrap}
+.track{position:relative;height:18px;margin-top:8px}
+.track::before{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:var(--line)}
+.seg{position:absolute;top:7px;height:4px;background:var(--good);border-radius:4px;transform-origin:left;animation:grow 1s ease-out both}
+.dot{position:absolute;top:2px;width:14px;height:14px;border-radius:50%;margin-left:-7px}
+.dot.b{background:var(--panel);border:3px solid var(--acc)}
+.dot.a{background:var(--good)}
+.lab{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);margin-top:2px}
+.legend{display:flex;gap:16px;font-size:13px;color:var(--mute);margin-top:10px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.sec h2{font-size:clamp(30px,3.6vw,42px);margin-bottom:8px}
+.lead{color:var(--mute);max-width:65ch;margin:0 0 28px;font-size:17px}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+.fact{background:var(--tint);border-radius:14px;padding:20px}
+.fact strong{display:block;font-family:Manrope,sans-serif;font-size:32px;font-weight:800;color:var(--good);line-height:1.1}
+.fact span{color:var(--ink)}
+.job{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:28px;padding:28px 0;border-top:1px solid var(--line)}
+.job h3{font-size:24px}
+.job .co{font-weight:600;color:var(--good);margin-top:6px}
+.job .dt{color:var(--mute);font-size:15px;white-space:nowrap}
+.job .ctx{color:var(--mute);margin:10px 0 0;font-size:15px}
+.grp h4{font-family:Manrope,sans-serif;font-size:17px;margin:0 0 6px}
+.grp{margin-bottom:18px}
+.grp ul{margin:0;padding-left:20px}
+.grp li{margin:4px 0}
+.alt{background:var(--tint)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:18px}
+.sk{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.sk h3{font-size:18px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--tint);border:1px solid var(--line);border-radius:99px;padding:5px 12px;font-size:14px;font-weight:500;white-space:nowrap}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px;margin-top:22px}
+.contact{background:var(--deep);color:#fff}
+.contact h2{color:#fff}
+.contact .lead{color:#cfe8df}
+.clist{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;margin-top:8px}
+.clist div{background:rgb(255 255 255/.08);border-radius:12px;padding:16px 18px}
+.clist small{display:block;color:#bfe0d5;font-size:13px}
+.clist a,.clist p{font-weight:600;font-size:17px;margin:2px 0 0;overflow-wrap:anywhere}
+footer{background:var(--deep);color:#bfe0d5;font-size:14px;padding:0 max(5vw,16px) 28px}
+footer .wrap{border-top:1px solid rgb(255 255 255/.15);padding-top:18px}
+@media(max-width:860px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.job{grid-template-columns:minmax(0,1fr);gap:12px}}
+@media(max-width:600px){header.nav nav a{padding:8px 9px;font-size:15px}.report{padding:18px 16px}}
+@media(prefers-reduced-motion:reduce){.seg{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <strong>Tanuja Doppalapudi</strong>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero band" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Tanuja Doppalapudi</h1>
+      <p class="role">Software Development Engineer in Test</p>
+      <p class="where">Chicago, IL · Open to remote · 8+ years</p>
+      <p class="sum">I lead quality from refinement to production. At CCC Intelligent Solutions I own the automation strategy, every release sign-off and production support. I drove automated coverage from 23% to 94%, led the move to Playwright and GitHub Actions, and cut regression runs from about 5 hours to under 1.</p>
+      <div class="cta">
+        <a class="btn solid" href="mailto:doppalapuditanuja@gmail.com">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/tanuja-d-814b60111" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="report" aria-label="Impact summary">
+      <div class="rhead"><h2>Quality report</h2><span class="pass">All checks passing</span></div>
+      <div id="rows"></div>
+      <div class="legend"><span><i style="background:var(--acc)"></i>Before</span><span><i style="background:var(--good)"></i>After my work</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band sec" id="about">
+  <div class="wrap">
+    <h2>I take ownership of quality, end to end</h2>
+    <p class="lead">I don't wait to be handed a test plan. I set the automation strategy, decide whether a release is ready to go, stand behind it in production, and make sure what QA delivers is documented. I push testing left into refinement and raise the bar for the engineers I mentor.</p>
+    <div class="about">
+      <div class="fact"><strong>1,500+</strong><span>automated tests across 4 suites</span></div>
+      <div class="fact"><strong>~170 hrs</strong><span>of manual testing freed every sprint</span></div>
+      <div class="fact"><strong>25,000+</strong><span>repair facilities on the platform I test</span></div>
+      <div class="fact"><strong>5</strong><span>engineers mentored (2 SDETs, 3 interns)</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band sec alt" id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="lead">Eight years across insurance-tech and enterprise billing platforms.</p>
+
+    <article class="job">
+      <div>
+        <h3>Software Development Engineer in Test</h3>
+        <p class="co">CCC Intelligent Solutions</p>
+        <p class="dt">Feb 2023 – Present · Chicago, IL</p>
+        <p class="ctx">Quality lead and owner for CCC ONE Shop Management and Repair Workflow on a 33-member Agile team, accountable for release readiness and production quality.</p>
+      </div>
+      <div>
+        <div class="grp"><h4>Release ownership and production support</h4><ul>
+          <li>Took ownership of backout (rollback) testing and forward testing every sprint, so each deployment had a verified path forward and a verified way back.</li>
+          <li>Provided production support for every release, including post-deployment validation in production.</li>
+          <li>Ran release validation with a Confluence checklist and go/no-go criteria, and made the QA call on whether each release shipped.</li>
+          <li>Maintained QA documentation in Confluence and owned the release deck and release notes delivered from QA for every release.</li>
+        </ul></div>
+        <div class="grp"><h4>Automation strategy and leadership</h4><ul>
+          <li>Defined and drove a testing-pyramid automation strategy that raised coverage from 23% to 94% (1,500+ tests across 4 suites), freeing about 170 manual hours per sprint.</li>
+          <li>Led the Selenium to Playwright (TypeScript) and Jenkins to GitHub Actions migrations; built the framework with fixtures, page objects and API-driven test data, cutting regression from about 5 hours to under 1.</li>
+          <li>Set the team's coding standards for test code, code reviews and defect reporting, and mentored 5 engineers (2 mid-level SDETs, 3 interns).</li>
+        </ul></div>
+        <div class="grp"><h4>API, data and integration testing</h4><ul>
+          <li>Validated REST, Kafka and Elasticsearch services with REST Assured, Postman and SQL; reduced flaky UI tests by about 50%.</li>
+          <li>Owned end-to-end quality for procure-to-pay across Salesforce, CLEAR, CCC Parts and 8+ partner integrations (Nissan, Honda, CDK).</li>
+        </ul></div>
+        <div class="grp"><h4>Defect prevention</h4><ul>
+          <li>Shifted testing left by challenging acceptance criteria in refinement, catching promo pricing errors on superseded parts before production.</li>
+          <li>Turned escaped-defect root-cause analysis into regression coverage, lowering escaped defects by about 30%.</li>
+        </ul></div>
+        <div class="grp"><h4>AI features and AI-assisted QA</h4><ul>
+          <li>Owned testing for the first LLM feature (invoice-to-PO matching) with a 743-invoice regression suite across web and iPhone upload, a 100% pass gate and verified fallback to manual review.</li>
+          <li>Used Claude and GitHub Copilot for test design, test data, SQL and log triage, making test design about 30% faster.</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="job">
+      <div>
+        <h3>Senior Member Technical, QA Automation</h3>
+        <p class="co">ADP</p>
+        <p class="dt">Jan 2018 – Dec 2021 · Hyderabad, India</p>
+        <p class="ctx">Order-to-cash and billing platforms (Oracle CPQ, Salesforce) for global clients.</p>
+      </div>
+      <div>
+        <div class="grp"><ul>
+          <li>Introduced and built the team's first BDD framework with Selenium and Cucumber.</li>
+          <li>Drove Jenkins CI for UFT suites and migrated legacy OATS scripts, cutting regression from 4 days to 1.</li>
+          <li>Ran JMeter performance testing and mobile testing on iPhone.</li>
+        </ul></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="band sec" id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="lead">Tools I've used in production test suites.</p>
+    <div class="skills" id="skillgrid"></div>
+    <div class="edu">
+      <div class="fact"><span style="color:var(--mute);font-size:14px">Education</span><h3 style="font-size:20px;margin-top:4px">B.Tech, Electronics and Communication Engineering</h3><span>Vardhaman College of Engineering, 2018</span></div>
+      <div class="fact"><span style="color:var(--mute);font-size:14px">Certifications</span><h3 style="font-size:20px;margin-top:4px">Oracle Certified Java Programmer (OCJP)</h3><span>Salesforce Platform Developer I</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band contact sec" id="contact">
+  <div class="wrap">
+    <h2>Looking for someone to own quality?</h2>
+    <p class="lead">I'm looking for SDET and QA automation roles where I can lead quality, in Chicago or remote.</p>
+    <div class="clist">
+      <div><small>Email</small><a href="mailto:doppalapuditanuja@gmail.com">doppalapuditanuja@gmail.com</a></div>
+      <div><small>LinkedIn</small><a href="https://www.linkedin.com/in/tanuja-d-814b60111" target="_blank" rel="noopener">linkedin.com/in/tanuja-d-814b60111</a></div>
+      <div><small>Location</small><p>Chicago, IL · Open to remote</p></div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">© 2026 Tanuja Doppalapudi</div></footer>
+
+<script>
+{
+const R=[
+  {k:"Automated test coverage",b:23,a:94,max:100,bl:"23%",al:"94%",good:"up"},
+  {k:"Regression run time (CCC)",b:5,a:1,max:5,bl:"~5 hrs",al:"< 1 hr",good:"down"},
+  {k:"Flaky UI tests",b:100,a:50,max:100,bl:"baseline",al:"~50% fewer",good:"down"},
+  {k:"Escaped defects",b:100,a:70,max:100,bl:"baseline",al:"~30% fewer",good:"down"},
+  {k:"Regression cycle (ADP)",b:4,a:1,max:4,bl:"4 days",al:"1 day",good:"down"}
+];
+document.getElementById("rows").innerHTML=R.map(r=>{
+  const pb=r.b/r.max*100,pa=r.a/r.max*100,lo=Math.min(pb,pa),hi=Math.max(pb,pa);
+  return `<div class="row"><div class="rtop"><b>${r.k}</b><span>${r.al}</span></div>
+  <div class="track"><div class="seg" style="left:${lo}%;width:${hi-lo}%;${r.good==="down"?"transform-origin:right":""}"></div><i class="dot b" style="left:${pb}%"></i><i class="dot a" style="left:${pa}%"></i></div>
+  <div class="lab"><span>Before: ${r.bl}</span><span>After: ${r.al}</span></div></div>`;
+}).join("");
+const S=[
+  ["Test automation",["Playwright (TypeScript, Java)","Selenium","Cucumber (BDD)","TestNG","UFT"]],
+  ["API and data",["REST Assured","Postman","SQL (PostgreSQL)","Kafka","Elasticsearch"]],
+  ["CI/CD and tooling",["GitHub Actions","Jenkins","Git","Allure","AWS"]],
+  ["Performance and mobile",["JMeter","iPhone testing"]],
+  ["Process and AI",["Jira","Confluence","Agile","Claude","GitHub Copilot"]]
+];
+document.getElementById("skillgrid").innerHTML=S.map(([h,l])=>`<div class="sk"><h3>${h}</h3><div class="chips">${l.map(x=>`<span>${x}</span>`).join("")}</div></div>`).join("");
+}
+</script>
+</body>
+</html>
